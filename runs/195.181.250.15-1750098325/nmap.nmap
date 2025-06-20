@@ -1,0 +1,10 @@
+# Nmap 7.92 scan initiated Mon Jun 16 20:25:41 2025 as: nmap -sVC -p 80 -oA /home/mindlock/explo/runs/195.181.250.15-1750098325/nmap 195.181.250.15
+Nmap scan report for vps916.webglobe.com (195.181.250.15)
+Host is up (0.054s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    nginx
+|_http-title: 403 Forbidden
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jun 16 20:25:50 2025 -- 1 IP address (1 host up) scanned in 9.70 seconds

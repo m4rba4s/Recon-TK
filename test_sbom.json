@@ -1,0 +1,866 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:rtk-elite-1750412089",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-06-20T09:34:49.615601687Z",
+    "tools": [
+      {
+        "vendor": "funcybot",
+        "name": "RTK Elite SBOM Generator",
+        "version": "2.1.0"
+      }
+    ],
+    "authors": [
+      {
+        "name": "funcybot",
+        "email": "funcybot@gmail.com"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "bom-ref": "rtk-elite-main",
+      "name": "RTK Elite",
+      "version": "2.1.0",
+      "purl": "pkg:golang/github.com/funcybot/rtk-elite@2.1.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ab80f3ac209050338e55876ebc1c6df03f05bf637cbd55f1885d1ce69dac33cf"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "Copyright 2024 funcybot",
+      "properties": [
+        {
+          "name": "platform",
+          "value": "linux/amd64"
+        },
+        {
+          "name": "go_version",
+          "value": "go1.24.4"
+        },
+        {
+          "name": "build_date",
+          "value": "2025-06-20T11:34:49Z"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/funcybot/rtk-elite"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/funcybot/rtk-elite"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "golang-runtime",
+      "name": "Go Runtime",
+      "version": "go1.24.4",
+      "purl": "pkg:golang/runtime@1.24.4",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "runtime",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-PuerkitoBio-goquery",
+      "name": "github.com/PuerkitoBio/goquery",
+      "version": "v1.10.3",
+      "purl": "pkg:golang/github.com/PuerkitoBio/goquery@v1.10.3",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-fatih-color",
+      "name": "github.com/fatih/color",
+      "version": "v1.18.0",
+      "purl": "pkg:golang/github.com/fatih/color@v1.18.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-google-gopacket",
+      "name": "github.com/google/gopacket",
+      "version": "v1.1.19",
+      "purl": "pkg:golang/github.com/google/gopacket@v1.1.19",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-miekg-dns",
+      "name": "github.com/miekg/dns",
+      "version": "v1.1.66",
+      "purl": "pkg:golang/github.com/miekg/dns@v1.1.66",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-schollz-progressbar-v3",
+      "name": "github.com/schollz/progressbar/v3",
+      "version": "v3.18.0",
+      "purl": "pkg:golang/github.com/schollz/progressbar/v3@v3.18.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-sirupsen-logrus",
+      "name": "github.com/sirupsen/logrus",
+      "version": "v1.9.3",
+      "purl": "pkg:golang/github.com/sirupsen/logrus@v1.9.3",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-spf13-cobra",
+      "name": "github.com/spf13/cobra",
+      "version": "v1.9.1",
+      "purl": "pkg:golang/github.com/spf13/cobra@v1.9.1",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-spf13-viper",
+      "name": "github.com/spf13/viper",
+      "version": "v1.20.1",
+      "purl": "pkg:golang/github.com/spf13/viper@v1.20.1",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-texttheater-golang-levenshtein",
+      "name": "github.com/texttheater/golang-levenshtein",
+      "version": "v1.0.1",
+      "purl": "pkg:golang/github.com/texttheater/golang-levenshtein@v1.0.1",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "go.uber.org-zap",
+      "name": "go.uber.org/zap",
+      "version": "v1.27.0",
+      "purl": "pkg:golang/go.uber.org/zap@v1.27.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "golang.org-x-net",
+      "name": "golang.org/x/net",
+      "version": "v0.41.0",
+      "purl": "pkg:golang/golang.org/x/net@v0.41.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-andybalholm-cascadia",
+      "name": "github.com/andybalholm/cascadia",
+      "version": "v1.3.3",
+      "purl": "pkg:golang/github.com/andybalholm/cascadia@v1.3.3",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-fsnotify-fsnotify",
+      "name": "github.com/fsnotify/fsnotify",
+      "version": "v1.8.0",
+      "purl": "pkg:golang/github.com/fsnotify/fsnotify@v1.8.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-go-viper-mapstructure-v2",
+      "name": "github.com/go-viper/mapstructure/v2",
+      "version": "v2.2.1",
+      "purl": "pkg:golang/github.com/go-viper/mapstructure/v2@v2.2.1",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-inconshreveable-mousetrap",
+      "name": "github.com/inconshreveable/mousetrap",
+      "version": "v1.1.0",
+      "purl": "pkg:golang/github.com/inconshreveable/mousetrap@v1.1.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-mattn-go-colorable",
+      "name": "github.com/mattn/go-colorable",
+      "version": "v0.1.13",
+      "purl": "pkg:golang/github.com/mattn/go-colorable@v0.1.13",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-mattn-go-isatty",
+      "name": "github.com/mattn/go-isatty",
+      "version": "v0.0.20",
+      "purl": "pkg:golang/github.com/mattn/go-isatty@v0.0.20",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-mitchellh-colorstring",
+      "name": "github.com/mitchellh/colorstring",
+      "version": "v0.0.0-20190213212951-d06e56a500db",
+      "purl": "pkg:golang/github.com/mitchellh/colorstring@v0.0.0-20190213212951-d06e56a500db",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-pelletier-go-toml-v2",
+      "name": "github.com/pelletier/go-toml/v2",
+      "version": "v2.2.3",
+      "purl": "pkg:golang/github.com/pelletier/go-toml/v2@v2.2.3",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-rivo-uniseg",
+      "name": "github.com/rivo/uniseg",
+      "version": "v0.4.7",
+      "purl": "pkg:golang/github.com/rivo/uniseg@v0.4.7",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-sagikazarmark-locafero",
+      "name": "github.com/sagikazarmark/locafero",
+      "version": "v0.7.0",
+      "purl": "pkg:golang/github.com/sagikazarmark/locafero@v0.7.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-sourcegraph-conc",
+      "name": "github.com/sourcegraph/conc",
+      "version": "v0.3.0",
+      "purl": "pkg:golang/github.com/sourcegraph/conc@v0.3.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-spf13-afero",
+      "name": "github.com/spf13/afero",
+      "version": "v1.12.0",
+      "purl": "pkg:golang/github.com/spf13/afero@v1.12.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-spf13-cast",
+      "name": "github.com/spf13/cast",
+      "version": "v1.7.1",
+      "purl": "pkg:golang/github.com/spf13/cast@v1.7.1",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-spf13-pflag",
+      "name": "github.com/spf13/pflag",
+      "version": "v1.0.6",
+      "purl": "pkg:golang/github.com/spf13/pflag@v1.0.6",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "github.com-subosito-gotenv",
+      "name": "github.com/subosito/gotenv",
+      "version": "v1.6.0",
+      "purl": "pkg:golang/github.com/subosito/gotenv@v1.6.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "go.uber.org-multierr",
+      "name": "go.uber.org/multierr",
+      "version": "v1.10.0",
+      "purl": "pkg:golang/go.uber.org/multierr@v1.10.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "golang.org-x-mod",
+      "name": "golang.org/x/mod",
+      "version": "v0.25.0",
+      "purl": "pkg:golang/golang.org/x/mod@v0.25.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "golang.org-x-sync",
+      "name": "golang.org/x/sync",
+      "version": "v0.15.0",
+      "purl": "pkg:golang/golang.org/x/sync@v0.15.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "golang.org-x-sys",
+      "name": "golang.org/x/sys",
+      "version": "v0.33.0",
+      "purl": "pkg:golang/golang.org/x/sys@v0.33.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "golang.org-x-term",
+      "name": "golang.org/x/term",
+      "version": "v0.32.0",
+      "purl": "pkg:golang/golang.org/x/term@v0.32.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "golang.org-x-text",
+      "name": "golang.org/x/text",
+      "version": "v0.26.0",
+      "purl": "pkg:golang/golang.org/x/text@v0.26.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "golang.org-x-tools",
+      "name": "golang.org/x/tools",
+      "version": "v0.33.0",
+      "purl": "pkg:golang/golang.org/x/tools@v0.33.0",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "gopkg.in-yaml.v3",
+      "name": "gopkg.in/yaml.v3",
+      "version": "v3.0.1",
+      "purl": "pkg:golang/gopkg.in/yaml.v3@v3.0.1",
+      "properties": [
+        {
+          "name": "language",
+          "value": "go"
+        },
+        {
+          "name": "dependency_type",
+          "value": "direct"
+        },
+        {
+          "name": "dependency_type",
+          "value": "indirect"
+        }
+      ]
+    },
+    {
+      "type": "operating-system",
+      "bom-ref": "operating-system",
+      "name": "linux",
+      "version": "unknown",
+      "properties": [
+        {
+          "name": "architecture",
+          "value": "amd64"
+        },
+        {
+          "name": "type",
+          "value": "operating-system"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "libc",
+      "name": "libc",
+      "version": "system",
+      "properties": [
+        {
+          "name": "provider",
+          "value": "glibc"
+        },
+        {
+          "name": "type",
+          "value": "system-library"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "libssl",
+      "name": "libssl",
+      "version": "system",
+      "properties": [
+        {
+          "name": "provider",
+          "value": "openssl"
+        },
+        {
+          "name": "type",
+          "value": "system-library"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "libcrypto",
+      "name": "libcrypto",
+      "version": "system",
+      "properties": [
+        {
+          "name": "provider",
+          "value": "openssl"
+        },
+        {
+          "name": "type",
+          "value": "system-library"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "rtk-elite-main",
+      "dependsOn": [
+        "golang-runtime",
+        "github.com-PuerkitoBio-goquery",
+        "github.com-fatih-color",
+        "github.com-google-gopacket",
+        "github.com-miekg-dns",
+        "github.com-schollz-progressbar-v3",
+        "github.com-sirupsen-logrus",
+        "github.com-spf13-cobra",
+        "github.com-spf13-viper",
+        "github.com-texttheater-golang-levenshtein",
+        "go.uber.org-zap",
+        "golang.org-x-net",
+        "github.com-andybalholm-cascadia",
+        "github.com-fsnotify-fsnotify",
+        "github.com-go-viper-mapstructure-v2",
+        "github.com-inconshreveable-mousetrap",
+        "github.com-mattn-go-colorable",
+        "github.com-mattn-go-isatty",
+        "github.com-mitchellh-colorstring",
+        "github.com-pelletier-go-toml-v2",
+        "github.com-rivo-uniseg",
+        "github.com-sagikazarmark-locafero",
+        "github.com-sourcegraph-conc",
+        "github.com-spf13-afero",
+        "github.com-spf13-cast",
+        "github.com-spf13-pflag",
+        "github.com-subosito-gotenv",
+        "go.uber.org-multierr",
+        "golang.org-x-mod",
+        "golang.org-x-sync",
+        "golang.org-x-sys",
+        "golang.org-x-term",
+        "golang.org-x-text",
+        "golang.org-x-tools",
+        "gopkg.in-yaml.v3",
+        "operating-system",
+        "libc",
+        "libssl",
+        "libcrypto"
+      ]
+    }
+  ]
+}

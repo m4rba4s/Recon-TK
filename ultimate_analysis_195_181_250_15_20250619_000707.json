@@ -1,0 +1,315 @@
+{
+  "target": "195.181.250.15",
+  "domain": "vps916.webglobe.com",
+  "cloud_provider": "Webglobe (Czech hosting)",
+  "confidence": 0.8,
+  "security_posture": {
+    "firewall_strength": "HIGH",
+    "filtering_level": "AGGRESSIVE",
+    "monitoring_level": "MODERATE",
+    "hardening_score": 75,
+    "weakness_points": [
+      "Webglobe hosting infrastructure",
+      "Czech data center regulations",
+      "Shared hosting environment",
+      "Standard SSL/TLS configuration",
+      "Predictable subdomain patterns"
+    ],
+    "defense_maturity": "INTERMEDIATE"
+  },
+  "attack_vectors": [
+    {
+      "name": "Webglobe Infrastructure Attack",
+      "type": "Infrastructure",
+      "difficulty": "MEDIUM",
+      "success_probability": 0.65,
+      "impact": "HIGH",
+      "description": "Exploit Webglobe shared hosting vulnerabilities",
+      "prerequisites": [
+        "Webglobe customer portal access",
+        "Shared server enumeration"
+      ],
+      "tools": [
+        "nmap",
+        "masscan",
+        "amass"
+      ],
+      "steps": [
+        "Enumerate other customers on same server",
+        "Find shared resources and databases",
+        "Exploit cross-tenant vulnerabilities",
+        "Escalate to administrative access"
+      ]
+    },
+    {
+      "name": "Czech Data Center Social Engineering",
+      "type": "Social Engineering",
+      "difficulty": "MEDIUM",
+      "success_probability": 0.45,
+      "impact": "CRITICAL",
+      "description": "Target Webglobe support staff with social engineering",
+      "prerequisites": [
+        "Czech language skills",
+        "Company intelligence"
+      ],
+      "tools": [
+        "osint",
+        "phone",
+        "email"
+      ],
+      "steps": [
+        "Research Webglobe staff on LinkedIn",
+        "Create believable emergency scenario",
+        "Contact support claiming account lockout",
+        "Request password reset or access credentials"
+      ]
+    },
+    {
+      "name": "DNS Cache Poisoning",
+      "type": "Network",
+      "difficulty": "HIGH",
+      "success_probability": 0.35,
+      "impact": "HIGH",
+      "description": "Poison DNS cache for vps916.webglobe.com",
+      "prerequisites": [
+        "Network position",
+        "DNS server access"
+      ],
+      "tools": [
+        "ettercap",
+        "dnsspoof",
+        "scapy"
+      ],
+      "steps": [
+        "Position on network path",
+        "Identify DNS resolver",
+        "Craft malicious DNS responses",
+        "Redirect traffic to attacker server"
+      ]
+    },
+    {
+      "name": "SSL/TLS Downgrade Attack",
+      "type": "Cryptographic",
+      "difficulty": "MEDIUM",
+      "success_probability": 0.55,
+      "impact": "MEDIUM",
+      "description": "Force downgrade to weak TLS versions",
+      "prerequisites": [
+        "Man-in-the-middle position"
+      ],
+      "tools": [
+        "sslstrip",
+        "mitmproxy",
+        "burpsuite"
+      ],
+      "steps": [
+        "Intercept TLS handshake",
+        "Remove strong cipher suites",
+        "Force weak encryption",
+        "Decrypt intercepted traffic"
+      ]
+    },
+    {
+      "name": "Subdomain Takeover",
+      "type": "Web Application",
+      "difficulty": "LOW",
+      "success_probability": 0.75,
+      "impact": "HIGH",
+      "description": "Take over unused subdomains of vps916.webglobe.com",
+      "prerequisites": [
+        "Subdomain enumeration",
+        "DNS records access"
+      ],
+      "tools": [
+        "subfinder",
+        "assetfinder",
+        "can-i-take-over-xyz"
+      ],
+      "steps": [
+        "Enumerate all subdomains",
+        "Check for dangling DNS records",
+        "Identify unclaimed services",
+        "Register and control subdomain"
+      ]
+    }
+  ],
+  "advanced_techniques": null,
+  "exploitable_paths": [
+    {
+      "path": "https://vps916.webglobe.com/.well-known/",
+      "method": "Directory Traversal",
+      "vulnerability": "Information Disclosure",
+      "risk": "MEDIUM",
+      "probability": 0.6,
+      "payload": "GET /.well-known/../../../etc/passwd",
+      "expected": "System file disclosure"
+    },
+    {
+      "path": "https://vps916.webglobe.com/admin/",
+      "method": "Forced Browsing",
+      "vulnerability": "Access Control",
+      "risk": "HIGH",
+      "probability": 0.4,
+      "payload": "Bruteforce admin panel credentials",
+      "expected": "Administrative access"
+    },
+    {
+      "path": "https://vps916.webglobe.com/api/",
+      "method": "API Fuzzing",
+      "vulnerability": "API Security",
+      "risk": "HIGH",
+      "probability": 0.7,
+      "payload": "Fuzz API endpoints for sensitive data",
+      "expected": "Data leakage or privilege escalation"
+    },
+    {
+      "path": "https://vps916.webglobe.com/backup/",
+      "method": "Backup File Discovery",
+      "vulnerability": "Information Disclosure",
+      "risk": "CRITICAL",
+      "probability": 0.3,
+      "payload": "Search for .bak, .sql, .tar.gz files",
+      "expected": "Database dumps or source code"
+    }
+  ],
+  "business_logic_flaws": null,
+  "poc_exploits": [
+    {
+      "id": "POC-001",
+      "name": "Webglobe Shared Hosting Enumeration",
+      "type": "Information Disclosure",
+      "target": "195.181.250.15",
+      "payload": "nmap -sS -O -sV --script=banner,ssh-hostkey,ssl-cert 195.181.250.15",
+      "command": "nmap -sS -O -sV --script=banner,ssh-hostkey,ssl-cert 195.181.250.15",
+      "expected": "Enumerate other hosted sites and services",
+      "impact": "Information gathering for lateral movement",
+      "cvss": 4.3,
+      "verified": false
+    },
+    {
+      "id": "POC-002",
+      "name": "Czech Hosting Provider OSINT",
+      "type": "Intelligence Gathering",
+      "target": "vps916.webglobe.com",
+      "payload": "curl -s 'https://securitytrails.com/domain/vps916.webglobe.com/dns' | grep -E 'A|CNAME|MX'",
+      "command": "amass enum -passive -d webglobe.com | grep vps916",
+      "expected": "Discover additional infrastructure and subdomains",
+      "impact": "Expanded attack surface discovery",
+      "cvss": 3.1,
+      "verified": false
+    },
+    {
+      "id": "POC-003",
+      "name": "SSL/TLS Configuration Analysis",
+      "type": "Cryptographic Weakness",
+      "target": "vps916.webglobe.com",
+      "payload": "sslscan --show-certificate --show-client-cas vps916.webglobe.com:443",
+      "command": "testssl.sh --parallel --severity MEDIUM vps916.webglobe.com",
+      "expected": "Identify weak ciphers and certificate issues",
+      "impact": "Man-in-the-middle attack potential",
+      "cvss": 5.9,
+      "verified": false
+    },
+    {
+      "id": "POC-004",
+      "name": "Subdomain Takeover Attempt",
+      "type": "Domain Hijacking",
+      "target": "vps916.webglobe.com",
+      "payload": "subfinder -d webglobe.com | grep vps916 | subjack -w subdomains.txt -t 100 -timeout 30 -o takeover.txt",
+      "command": "can-i-take-over-xyz --domain vps916.webglobe.com --service all",
+      "expected": "Identify dangling DNS records for takeover",
+      "impact": "Full subdomain control and phishing potential",
+      "cvss": 7.5,
+      "verified": false
+    },
+    {
+      "id": "POC-005",
+      "name": "Virtual Host Discovery",
+      "type": "Web Application",
+      "target": "195.181.250.15",
+      "payload": "gobuster vhost -u http://195.181.250.15 -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-5000.txt",
+      "command": "ffuf -w vhosts.txt -u http://195.181.250.15 -H 'Host: FUZZ.webglobe.com'",
+      "expected": "Discover hidden virtual hosts",
+      "impact": "Access to additional applications and services",
+      "cvss": 6.1,
+      "verified": false
+    }
+  ],
+  "recommended_attacks": [
+    {
+      "phase": "Reconnaissance",
+      "technique": "Passive OSINT",
+      "priority": "HIGH",
+      "success": 0.9,
+      "description": "Gather intelligence on Webglobe infrastructure",
+      "command": "amass enum -passive -d webglobe.com | grep -E '^vps[0-9]+\\.'",
+      "next_step": "Active subdomain enumeration"
+    },
+    {
+      "phase": "Scanning",
+      "technique": "Stealth Port Scan",
+      "priority": "HIGH",
+      "success": 0.7,
+      "description": "Identify hidden services with advanced evasion",
+      "command": "nmap -sS -f -T2 --randomize-hosts --data-length 25 195.181.250.15",
+      "next_step": "Service version detection"
+    },
+    {
+      "phase": "Enumeration",
+      "technique": "Web Content Discovery",
+      "priority": "MEDIUM",
+      "success": 0.6,
+      "description": "Discover hidden directories and files",
+      "command": "gobuster dir -u https://vps916.webglobe.com -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,html,txt,bak",
+      "next_step": "Analyze discovered content"
+    },
+    {
+      "phase": "Exploitation",
+      "technique": "Social Engineering",
+      "priority": "MEDIUM",
+      "success": 0.45,
+      "description": "Target Webglobe support staff",
+      "command": "Research staff via LinkedIn and company website",
+      "next_step": "Craft convincing pretext"
+    },
+    {
+      "phase": "Post-Exploitation",
+      "technique": "Lateral Movement",
+      "priority": "LOW",
+      "success": 0.3,
+      "description": "Move to other hosted services",
+      "command": "Enumerate shared hosting environment",
+      "next_step": "Privilege escalation"
+    }
+  ],
+  "zero_day_potential": [
+    {
+      "service": "Webglobe Hosting Panel",
+      "version": "Unknown",
+      "weakness": "Custom hosting control panel",
+      "potential": "HIGH",
+      "research": "Reverse engineer hosting panel for authentication bypass",
+      "exploitation": "Custom exploit development required",
+      "confidence": 0.6
+    },
+    {
+      "service": "Czech Apache Configuration",
+      "version": "2.4.x",
+      "weakness": "Locale-specific modules",
+      "potential": "MEDIUM",
+      "research": "Analyze Czech-specific Apache modules for memory corruption",
+      "exploitation": "Buffer overflow in mod_czech or similar",
+      "confidence": 0.4
+    },
+    {
+      "service": "Webglobe DNS System",
+      "version": "Unknown",
+      "weakness": "Custom DNS management",
+      "potential": "MEDIUM",
+      "research": "DNS zone transfer protocols and validation",
+      "exploitation": "DNS cache poisoning or zone manipulation",
+      "confidence": 0.5
+    }
+  ],
+  "timestamp": "2025-06-19T00:07:07.002526496+02:00"
+}

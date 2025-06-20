@@ -1,0 +1,149 @@
+{
+  "target": "172.67.68.228",
+  "cloudflare_detection": {
+    "is_cloudflare": true,
+    "cf_ray_headers": [
+      "951faeac6e8c7e80-CDG"
+    ],
+    "origin_ips": [
+      "192.168.1.100"
+    ],
+    "bypass_methods": [
+      "Host header injection",
+      "Direct IP access"
+    ],
+    "successful_bypasses": null,
+    "colo_locations": [
+      "CDG"
+    ]
+  },
+  "origin_discovery": {
+    "methods": [
+      "DNS History",
+      "Certificate Transparency",
+      "Subdomain Enumeration"
+    ],
+    "discovered_origins": null,
+    "subdomain_scan": {
+      "total_found": 2,
+      "active_subdomains": [
+        "www.172.67.68.228",
+        "mail.172.67.68.228"
+      ],
+      "wildcard_domains": null,
+      "takeover_targets": null
+    },
+    "dns_history": null,
+    "cert_transparency": null
+  },
+  "waf_bypass": {
+    "waf_detected": true,
+    "waf_type": "Unknown WAF",
+    "bypass_techniques": [
+      {
+        "name": "XSS Test",
+        "description": "",
+        "success": false,
+        "payload": "\u003cscript\u003ealert(1)\u003c/script\u003e",
+        "response": "Status: 403",
+        "confidence": 0.7
+      },
+      {
+        "name": "XSS Test",
+        "description": "",
+        "success": false,
+        "payload": "' OR '1'='1",
+        "response": "Status: 403",
+        "confidence": 0.7
+      },
+      {
+        "name": "XSS Test",
+        "description": "",
+        "success": false,
+        "payload": "../../../etc/passwd",
+        "response": "Status: 403",
+        "confidence": 0.7
+      },
+      {
+        "name": "XSS Test",
+        "description": "",
+        "success": false,
+        "payload": "\u003cimg src=x onerror=alert(1)\u003e",
+        "response": "Status: 403",
+        "confidence": 0.7
+      }
+    ],
+    "successful_payloads": null,
+    "filtered_payloads": [
+      "\u003cscript\u003ealert(1)\u003c/script\u003e",
+      "' OR '1'='1",
+      "../../../etc/passwd",
+      "\u003cimg src=x onerror=alert(1)\u003e"
+    ]
+  },
+  "hidden_service_detection": {
+    "methods_used": [
+      "Port Scanning",
+      "Banner Grabbing",
+      "Service Detection"
+    ],
+    "discovered_ports": [
+      {
+        "port": 8080,
+        "protocol": "tcp",
+        "service": "unknown",
+        "banner": "",
+        "hidden": true,
+        "confidence": 0.8,
+        "access_level": ""
+      },
+      {
+        "port": 8443,
+        "protocol": "tcp",
+        "service": "unknown",
+        "banner": "",
+        "hidden": true,
+        "confidence": 0.8,
+        "access_level": ""
+      }
+    ],
+    "tunnel_services": null,
+    "backdoor_signs": null
+  },
+  "vulnerability_probing": {
+    "total_vulns": 0,
+    "critical_vulns": null,
+    "exploitable_vulns": null,
+    "zero_day_signatures": null,
+    "real_exploits": null
+  },
+  "network_mapping": {
+    "network_range": "172.67.68.0/24",
+    "live_hosts": null,
+    "network_services": null,
+    "topology": {
+      "gateway": "",
+      "subnets": null,
+      "vlans": null,
+      "firewalls": null,
+      "load_balancers": null
+    },
+    "shared_resources": null
+  },
+  "real_world_findings": {
+    "apt_indicators": null,
+    "malware_signatures": null,
+    "data_leaks": null,
+    "compromise_indicators": null,
+    "threat_intelligence": {
+      "threat_actors": null,
+      "ttps": null,
+      "infrastructure": null,
+      "campaigns": null,
+      "mitigation": null
+    },
+    "business_logic_flaws": null
+  },
+  "timestamp": "2025-06-19T06:40:35.824709801+02:00",
+  "scan_duration": 20658404914
+}

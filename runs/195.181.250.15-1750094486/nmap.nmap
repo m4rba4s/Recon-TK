@@ -1,0 +1,55 @@
+# Nmap 7.92 scan initiated Mon Jun 16 19:21:43 2025 as: nmap -sVC -p 8465,8995 -oA /home/mindlock/explo/runs/195.181.250.15-1750094486/nmap 195.181.250.15
+Nmap scan report for vps916.webglobe.com (195.181.250.15)
+Host is up (0.054s latency).
+
+PORT     STATE SERVICE     VERSION
+8465/tcp open  ssl/unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NULL, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|_    535 Your IP is blocked. Visit delist.nameserver.sk
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=ms.freepoint.cz
+| Subject Alternative Name: DNS:mail.freepoint.cz, DNS:ms.freepoint.cz, DNS:webmail.freepoint.cz
+| Not valid before: 2021-05-11T00:45:19
+|_Not valid after:  2021-08-09T00:45:19
+8995/tcp open  ssl/pop3    qpopper pop3d
+|_pop3-capabilities: ERROR: Script execution failed (use -d to debug)
+| ssl-cert: Subject: commonName=ms.freepoint.cz
+| Subject Alternative Name: DNS:mail.freepoint.cz, DNS:ms.freepoint.cz, DNS:webmail.freepoint.cz
+| Not valid before: 2021-05-11T00:45:19
+|_Not valid after:  2021-08-09T00:45:19
+|_ssl-date: TLS randomness does not represent time
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8465-TCP:V=7.92%T=SSL%I=7%D=6/16%Time=685052B4%P=x86_64-redhat-linu
+SF:x-gnu%r(NULL,34,"535\x20Your\x20IP\x20is\x20blocked\.\x20Visit\x20delis
+SF:t\.nameserver\.sk\r\n")%r(GenericLines,34,"535\x20Your\x20IP\x20is\x20b
+SF:locked\.\x20Visit\x20delist\.nameserver\.sk\r\n")%r(GetRequest,34,"535\
+SF:x20Your\x20IP\x20is\x20blocked\.\x20Visit\x20delist\.nameserver\.sk\r\n
+SF:")%r(HTTPOptions,34,"535\x20Your\x20IP\x20is\x20blocked\.\x20Visit\x20d
+SF:elist\.nameserver\.sk\r\n")%r(RTSPRequest,34,"535\x20Your\x20IP\x20is\x
+SF:20blocked\.\x20Visit\x20delist\.nameserver\.sk\r\n")%r(RPCCheck,34,"535
+SF:\x20Your\x20IP\x20is\x20blocked\.\x20Visit\x20delist\.nameserver\.sk\r\
+SF:n")%r(DNSVersionBindReqTCP,34,"535\x20Your\x20IP\x20is\x20blocked\.\x20
+SF:Visit\x20delist\.nameserver\.sk\r\n")%r(DNSStatusRequestTCP,34,"535\x20
+SF:Your\x20IP\x20is\x20blocked\.\x20Visit\x20delist\.nameserver\.sk\r\n")%
+SF:r(Help,34,"535\x20Your\x20IP\x20is\x20blocked\.\x20Visit\x20delist\.nam
+SF:eserver\.sk\r\n")%r(SSLSessionReq,34,"535\x20Your\x20IP\x20is\x20blocke
+SF:d\.\x20Visit\x20delist\.nameserver\.sk\r\n")%r(TerminalServerCookie,34,
+SF:"535\x20Your\x20IP\x20is\x20blocked\.\x20Visit\x20delist\.nameserver\.s
+SF:k\r\n")%r(TLSSessionReq,34,"535\x20Your\x20IP\x20is\x20blocked\.\x20Vis
+SF:it\x20delist\.nameserver\.sk\r\n")%r(Kerberos,34,"535\x20Your\x20IP\x20
+SF:is\x20blocked\.\x20Visit\x20delist\.nameserver\.sk\r\n")%r(SMBProgNeg,3
+SF:4,"535\x20Your\x20IP\x20is\x20blocked\.\x20Visit\x20delist\.nameserver\
+SF:.sk\r\n")%r(X11Probe,34,"535\x20Your\x20IP\x20is\x20blocked\.\x20Visit\
+SF:x20delist\.nameserver\.sk\r\n")%r(FourOhFourRequest,34,"535\x20Your\x20
+SF:IP\x20is\x20blocked\.\x20Visit\x20delist\.nameserver\.sk\r\n")%r(LPDStr
+SF:ing,34,"535\x20Your\x20IP\x20is\x20blocked\.\x20Visit\x20delist\.namese
+SF:rver\.sk\r\n")%r(LDAPSearchReq,34,"535\x20Your\x20IP\x20is\x20blocked\.
+SF:\x20Visit\x20delist\.nameserver\.sk\r\n")%r(LDAPBindReq,34,"535\x20Your
+SF:\x20IP\x20is\x20blocked\.\x20Visit\x20delist\.nameserver\.sk\r\n")%r(SI
+SF:POptions,34,"535\x20Your\x20IP\x20is\x20blocked\.\x20Visit\x20delist\.n
+SF:ameserver\.sk\r\n")%r(LANDesk-RC,34,"535\x20Your\x20IP\x20is\x20blocked
+SF:\.\x20Visit\x20delist\.nameserver\.sk\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jun 16 19:22:18 2025 -- 1 IP address (1 host up) scanned in 35.02 seconds

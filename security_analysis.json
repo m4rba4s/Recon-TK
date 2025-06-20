@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-06-20T11:32:18.903562849+02:00",
+  "target": "battle_test_sbom.json",
+  "total_components": 39,
+  "vulnerable_components": 0,
+  "high_risk_vulnerabilities": 0,
+  "critical_vulnerabilities": 0,
+  "vulnerabilities": null,
+  "supply_chain_risk": "LOW",
+  "recommendations": [
+    "✅ No known vulnerabilities detected",
+    "Continue regular dependency updates"
+  ]
+}

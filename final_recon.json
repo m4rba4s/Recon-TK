@@ -1,0 +1,82 @@
+{
+  "target": "195.181.250.15",
+  "ports": [
+    {
+      "port": 21,
+      "state": "open",
+      "service": "ftp",
+      "banner": "220 195.181.250.15 FTP server ready",
+      "version": "195.181.250.15",
+      "response_time": 54520716
+    },
+    {
+      "port": 80,
+      "state": "open",
+      "service": "http",
+      "banner": "nginx",
+      "version": "",
+      "response_time": 57608609
+    },
+    {
+      "port": 110,
+      "state": "open",
+      "service": "pop3",
+      "banner": "+OK Dovecot ready.",
+      "version": "ready.",
+      "response_time": 55045029
+    },
+    {
+      "port": 143,
+      "state": "open",
+      "service": "imap",
+      "banner": "* OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready.",
+      "version": "ready.",
+      "response_time": 54565283
+    },
+    {
+      "port": 443,
+      "state": "open",
+      "service": "https",
+      "banner": "nginx",
+      "version": "",
+      "response_time": 55442471
+    },
+    {
+      "port": 465,
+      "state": "open",
+      "service": "unknown",
+      "banner": "",
+      "version": "",
+      "response_time": 149689633
+    },
+    {
+      "port": 587,
+      "state": "open",
+      "service": "unknown",
+      "banner": "220 vps916.webglobe.com ESMTP",
+      "version": "vps916.webglobe.com",
+      "response_time": 54255152
+    },
+    {
+      "port": 993,
+      "state": "open",
+      "service": "imaps",
+      "banner": "",
+      "version": "",
+      "response_time": 54139348
+    },
+    {
+      "port": 995,
+      "state": "open",
+      "service": "pop3s",
+      "banner": "",
+      "version": "",
+      "response_time": 142038861
+    }
+  ],
+  "open_ports": 9,
+  "scan_time": 16530199045,
+  "stealth_mode": true,
+  "honeypot_detected": false,
+  "os_fingerprint": "OS:unknown Ports:21/ftp,80/http,110/pop3,143/imap,443/https,465/unknown,587/unknown,993/imaps,995/pop3s"
+}

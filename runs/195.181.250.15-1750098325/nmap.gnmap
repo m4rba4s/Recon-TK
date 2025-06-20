@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Mon Jun 16 20:25:41 2025 as: nmap -sVC -p 80 -oA /home/mindlock/explo/runs/195.181.250.15-1750098325/nmap 195.181.250.15
+Host: 195.181.250.15 (vps916.webglobe.com)	Status: Up
+Host: 195.181.250.15 (vps916.webglobe.com)	Ports: 80/open/tcp//http//nginx/
+# Nmap done at Mon Jun 16 20:25:50 2025 -- 1 IP address (1 host up) scanned in 9.70 seconds

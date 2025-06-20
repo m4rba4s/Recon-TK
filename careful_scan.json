@@ -1,0 +1,26 @@
+{
+  "target": "195.181.250.15",
+  "ports": [
+    {
+      "port": 80,
+      "state": "open",
+      "service": "http",
+      "banner": "nginx",
+      "version": "",
+      "response_time": 54573657
+    },
+    {
+      "port": 443,
+      "state": "open",
+      "service": "https",
+      "banner": "nginx",
+      "version": "",
+      "response_time": 54680422
+    }
+  ],
+  "open_ports": 2,
+  "scan_time": 9249118731,
+  "stealth_mode": true,
+  "honeypot_detected": false,
+  "os_fingerprint": "OS:unknown Ports:80/http,443/https"
+}

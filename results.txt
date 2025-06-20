@@ -1,0 +1,13 @@
+Port Scan Results for 192.168.1.1
+===========================================
+Open Ports: 3/3
+Scan Time: 7.038969847s
+Stealth Mode: false
+Honeypot Detected: false
+OS Fingerprint: OS:unknown Ports:21/ftp,80/http,443/https
+
+PORT   STATE      SERVICE      VERSION                        BANNER
+--------------------------------------------------------------------------------
+21     open       ftp          192.168.1.1                220 195.181.250.15 FTP serv...
+80     open       http                                        nginx
+443    open       https                                       nginx

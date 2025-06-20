@@ -1,0 +1,490 @@
+{
+  "metadata": {
+    "title": "Elite AI-Powered Security Assessment",
+    "client": "",
+    "consultant": "AI-Powered Assessment",
+    "company": "Elite Pentest Framework",
+    "version": "Elite 1.0",
+    "classification": "",
+    "generated_at": "2025-06-16T22:03:36.665169813+02:00",
+    "scan_period": "",
+    "scope": null,
+    "methodology": [
+      "OWASP",
+      "NIST",
+      "PTES"
+    ],
+    "tools": [
+      "recon-toolkit"
+    ],
+    "disclaimer": "",
+    "executive_summary": "This security assessment identified 11 security findings across the target environment. The overall risk level is LOW, with a risk score of 33.0 out of 100. Additionally, 1 high-severity issues were identified that should be addressed promptly. Detailed findings and remediation guidance are provided in the technical sections of this report."
+  },
+  "findings": [
+    {
+      "id": "PORT-21",
+      "title": "Open Port 21 (ftp)",
+      "severity": "High",
+      "cvss_score": 7.8,
+      "cvss_vector": "",
+      "description": "Port 21 is open and running ftp service",
+      "impact": "",
+      "evidence": [
+        {
+          "type": "network_response",
+          "description": "Service banner",
+          "data": "220 195.181.250.15 FTP server ready",
+          "timestamp": "2025-06-16T22:03:36.665181556+02:00",
+          "metadata": null
+        }
+      ],
+      "remediation": "Review and secure the identified service configuration. Consider closing unnecessary ports or implementing access controls. Disable anonymous access, use SFTP/FTPS, or consider alternative file transfer methods. Apply security patches and follow vendor security guidelines.",
+      "references": null,
+      "cwe": "",
+      "cve": null,
+      "affected_hosts": [
+        "195.181.250.15"
+      ],
+      "ports": [
+        21
+      ],
+      "services": [
+        "ftp"
+      ],
+      "proof_of_concept": "",
+      "exploit_code": "",
+      "owasp": null,
+      "nist": null,
+      "iso27001": null,
+      "first_seen": "2025-06-16T22:03:36.665180276+02:00",
+      "last_seen": "2025-06-16T22:03:36.665180389+02:00",
+      "verified": true,
+      "false_positive": false
+    },
+    {
+      "id": "PORT-80",
+      "title": "Open Port 80 (http)",
+      "severity": "Low",
+      "cvss_score": 3.8,
+      "cvss_vector": "",
+      "description": "Port 80 is open and running http service",
+      "impact": "",
+      "evidence": [
+        {
+          "type": "network_response",
+          "description": "Service banner",
+          "data": "nginx",
+          "timestamp": "2025-06-16T22:03:36.665192719+02:00",
+          "metadata": null
+        }
+      ],
+      "remediation": "Review and secure the identified service configuration. Consider closing unnecessary ports or implementing access controls. Apply security patches and follow vendor security guidelines.",
+      "references": null,
+      "cwe": "",
+      "cve": null,
+      "affected_hosts": [
+        "195.181.250.15"
+      ],
+      "ports": [
+        80
+      ],
+      "services": [
+        "http"
+      ],
+      "proof_of_concept": "",
+      "exploit_code": "",
+      "owasp": null,
+      "nist": null,
+      "iso27001": null,
+      "first_seen": "2025-06-16T22:03:36.665192276+02:00",
+      "last_seen": "2025-06-16T22:03:36.665192383+02:00",
+      "verified": true,
+      "false_positive": false
+    },
+    {
+      "id": "PORT-110",
+      "title": "Open Port 110 (pop3)",
+      "severity": "Medium",
+      "cvss_score": 5.8,
+      "cvss_vector": "",
+      "description": "Port 110 is open and running pop3 service",
+      "impact": "",
+      "evidence": [
+        {
+          "type": "network_response",
+          "description": "Service banner",
+          "data": "+OK Dovecot ready.",
+          "timestamp": "2025-06-16T22:03:36.665200157+02:00",
+          "metadata": null
+        }
+      ],
+      "remediation": "Review and secure the identified service configuration. Consider closing unnecessary ports or implementing access controls. Apply security patches and follow vendor security guidelines.",
+      "references": null,
+      "cwe": "",
+      "cve": null,
+      "affected_hosts": [
+        "195.181.250.15"
+      ],
+      "ports": [
+        110
+      ],
+      "services": [
+        "pop3"
+      ],
+      "proof_of_concept": "",
+      "exploit_code": "",
+      "owasp": null,
+      "nist": null,
+      "iso27001": null,
+      "first_seen": "2025-06-16T22:03:36.665199757+02:00",
+      "last_seen": "2025-06-16T22:03:36.665199864+02:00",
+      "verified": true,
+      "false_positive": false
+    },
+    {
+      "id": "PORT-143",
+      "title": "Open Port 143 (imap)",
+      "severity": "Medium",
+      "cvss_score": 5.8,
+      "cvss_vector": "",
+      "description": "Port 143 is open and running imap service",
+      "impact": "",
+      "evidence": [
+        {
+          "type": "network_response",
+          "description": "Service banner",
+          "data": "* OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready.",
+          "timestamp": "2025-06-16T22:03:36.665205444+02:00",
+          "metadata": null
+        }
+      ],
+      "remediation": "Review and secure the identified service configuration. Consider closing unnecessary ports or implementing access controls. Apply security patches and follow vendor security guidelines.",
+      "references": null,
+      "cwe": "",
+      "cve": null,
+      "affected_hosts": [
+        "195.181.250.15"
+      ],
+      "ports": [
+        143
+      ],
+      "services": [
+        "imap"
+      ],
+      "proof_of_concept": "",
+      "exploit_code": "",
+      "owasp": null,
+      "nist": null,
+      "iso27001": null,
+      "first_seen": "2025-06-16T22:03:36.665205046+02:00",
+      "last_seen": "2025-06-16T22:03:36.665205153+02:00",
+      "verified": true,
+      "false_positive": false
+    },
+    {
+      "id": "PORT-222",
+      "title": "Open Port 222 (unknown)",
+      "severity": "Informational",
+      "cvss_score": 0.8,
+      "cvss_vector": "",
+      "description": "Port 222 is open and running unknown service",
+      "impact": "",
+      "evidence": [
+        {
+          "type": "network_response",
+          "description": "Service banner",
+          "data": "SSH-2.0-mod_sftp",
+          "timestamp": "2025-06-16T22:03:36.665209399+02:00",
+          "metadata": null
+        }
+      ],
+      "remediation": "Review and secure the identified service configuration. Consider closing unnecessary ports or implementing access controls. Apply security patches and follow vendor security guidelines.",
+      "references": null,
+      "cwe": "",
+      "cve": null,
+      "affected_hosts": [
+        "195.181.250.15"
+      ],
+      "ports": [
+        222
+      ],
+      "services": [
+        "unknown"
+      ],
+      "proof_of_concept": "",
+      "exploit_code": "",
+      "owasp": null,
+      "nist": null,
+      "iso27001": null,
+      "first_seen": "2025-06-16T22:03:36.665209004+02:00",
+      "last_seen": "2025-06-16T22:03:36.665209112+02:00",
+      "verified": true,
+      "false_positive": false
+    },
+    {
+      "id": "PORT-443",
+      "title": "Open Port 443 (https)",
+      "severity": "Low",
+      "cvss_score": 3.8,
+      "cvss_vector": "",
+      "description": "Port 443 is open and running https service",
+      "impact": "",
+      "evidence": [
+        {
+          "type": "network_response",
+          "description": "Service banner",
+          "data": "nginx",
+          "timestamp": "2025-06-16T22:03:36.665216182+02:00",
+          "metadata": null
+        }
+      ],
+      "remediation": "Review and secure the identified service configuration. Consider closing unnecessary ports or implementing access controls. Apply security patches and follow vendor security guidelines.",
+      "references": null,
+      "cwe": "",
+      "cve": null,
+      "affected_hosts": [
+        "195.181.250.15"
+      ],
+      "ports": [
+        443
+      ],
+      "services": [
+        "https"
+      ],
+      "proof_of_concept": "",
+      "exploit_code": "",
+      "owasp": null,
+      "nist": null,
+      "iso27001": null,
+      "first_seen": "2025-06-16T22:03:36.665215764+02:00",
+      "last_seen": "2025-06-16T22:03:36.665215871+02:00",
+      "verified": true,
+      "false_positive": false
+    },
+    {
+      "id": "PORT-465",
+      "title": "Open Port 465 (unknown)",
+      "severity": "Medium",
+      "cvss_score": 5.5,
+      "cvss_vector": "",
+      "description": "Port 465 is open and running unknown service",
+      "impact": "",
+      "evidence": null,
+      "remediation": "Review and secure the identified service configuration. Consider closing unnecessary ports or implementing access controls. Apply security patches and follow vendor security guidelines.",
+      "references": null,
+      "cwe": "",
+      "cve": null,
+      "affected_hosts": [
+        "195.181.250.15"
+      ],
+      "ports": [
+        465
+      ],
+      "services": [
+        "unknown"
+      ],
+      "proof_of_concept": "",
+      "exploit_code": "",
+      "owasp": null,
+      "nist": null,
+      "iso27001": null,
+      "first_seen": "2025-06-16T22:03:36.665219963+02:00",
+      "last_seen": "2025-06-16T22:03:36.66522007+02:00",
+      "verified": true,
+      "false_positive": false
+    },
+    {
+      "id": "PORT-587",
+      "title": "Open Port 587 (unknown)",
+      "severity": "Medium",
+      "cvss_score": 5.8,
+      "cvss_vector": "",
+      "description": "Port 587 is open and running unknown service",
+      "impact": "",
+      "evidence": [
+        {
+          "type": "network_response",
+          "description": "Service banner",
+          "data": "220 vps916.webglobe.com ESMTP",
+          "timestamp": "2025-06-16T22:03:36.665224044+02:00",
+          "metadata": null
+        }
+      ],
+      "remediation": "Review and secure the identified service configuration. Consider closing unnecessary ports or implementing access controls. Apply security patches and follow vendor security guidelines.",
+      "references": null,
+      "cwe": "",
+      "cve": null,
+      "affected_hosts": [
+        "195.181.250.15"
+      ],
+      "ports": [
+        587
+      ],
+      "services": [
+        "unknown"
+      ],
+      "proof_of_concept": "",
+      "exploit_code": "",
+      "owasp": null,
+      "nist": null,
+      "iso27001": null,
+      "first_seen": "2025-06-16T22:03:36.665223626+02:00",
+      "last_seen": "2025-06-16T22:03:36.665223733+02:00",
+      "verified": true,
+      "false_positive": false
+    },
+    {
+      "id": "PORT-993",
+      "title": "Open Port 993 (imaps)",
+      "severity": "Medium",
+      "cvss_score": 5.5,
+      "cvss_vector": "",
+      "description": "Port 993 is open and running imaps service",
+      "impact": "",
+      "evidence": null,
+      "remediation": "Review and secure the identified service configuration. Consider closing unnecessary ports or implementing access controls. Apply security patches and follow vendor security guidelines.",
+      "references": null,
+      "cwe": "",
+      "cve": null,
+      "affected_hosts": [
+        "195.181.250.15"
+      ],
+      "ports": [
+        993
+      ],
+      "services": [
+        "imaps"
+      ],
+      "proof_of_concept": "",
+      "exploit_code": "",
+      "owasp": null,
+      "nist": null,
+      "iso27001": null,
+      "first_seen": "2025-06-16T22:03:36.665227335+02:00",
+      "last_seen": "2025-06-16T22:03:36.665227442+02:00",
+      "verified": true,
+      "false_positive": false
+    },
+    {
+      "id": "PORT-995",
+      "title": "Open Port 995 (pop3s)",
+      "severity": "Medium",
+      "cvss_score": 5.5,
+      "cvss_vector": "",
+      "description": "Port 995 is open and running pop3s service",
+      "impact": "",
+      "evidence": null,
+      "remediation": "Review and secure the identified service configuration. Consider closing unnecessary ports or implementing access controls. Apply security patches and follow vendor security guidelines.",
+      "references": null,
+      "cwe": "",
+      "cve": null,
+      "affected_hosts": [
+        "195.181.250.15"
+      ],
+      "ports": [
+        995
+      ],
+      "services": [
+        "pop3s"
+      ],
+      "proof_of_concept": "",
+      "exploit_code": "",
+      "owasp": null,
+      "nist": null,
+      "iso27001": null,
+      "first_seen": "2025-06-16T22:03:36.665230417+02:00",
+      "last_seen": "2025-06-16T22:03:36.665230522+02:00",
+      "verified": true,
+      "false_positive": false
+    },
+    {
+      "id": "WAF-DETECTED",
+      "title": "Web Application Firewall Detected: Generic WAF",
+      "severity": "Informational",
+      "cvss_score": 0,
+      "cvss_vector": "",
+      "description": "A Generic WAF Web Application Firewall was detected with 0.70 confidence",
+      "impact": "",
+      "evidence": null,
+      "remediation": "",
+      "references": null,
+      "cwe": "",
+      "cve": null,
+      "affected_hosts": [
+        "https://195.181.250.15"
+      ],
+      "ports": null,
+      "services": null,
+      "proof_of_concept": "",
+      "exploit_code": "",
+      "owasp": null,
+      "nist": null,
+      "iso27001": null,
+      "first_seen": "2025-06-16T22:03:36.66524653+02:00",
+      "last_seen": "2025-06-16T22:03:36.665246646+02:00",
+      "verified": true,
+      "false_positive": false
+    }
+  ],
+  "metrics": {
+    "total_findings": 11,
+    "findings_by_severity": {
+      "High": 1,
+      "Informational": 2,
+      "Low": 2,
+      "Medium": 6
+    },
+    "average_cvss": 4.554545454545454,
+    "risk_score": 33,
+    "compliance_score": 0,
+    "top_risks": [
+      "Open Port 21 (ftp)"
+    ],
+    "hosts_affected": 2,
+    "services_affected": 8,
+    "ports_affected": 10
+  },
+  "appendices": {
+    "knowledge_stats": {
+      "total_techniques": 16,
+      "techniques_by_type": {
+        "port_scan": 10,
+        "stealth_scan": 1,
+        "waf_bypass": 5
+      },
+      "total_results": 0,
+      "overall_success_rate": 0,
+      "top_techniques": [
+        "Port 443 Discovery",
+        "Port 465 Discovery",
+        "Port 587 Discovery",
+        "Slow Stealth Scan",
+        "Port 21 Discovery",
+        "Port 143 Discovery",
+        "Port 993 Discovery",
+        "Unicode Normalization",
+        "Port 222 Discovery",
+        "Port 995 Discovery"
+      ],
+      "wafs_encountered": 0,
+      "last_update": "2025-06-16T22:03:35.979865416+02:00"
+    },
+    "session_id": "elite_1750104169",
+    "techniques_used": [
+      "aggressive_multiprotocol",
+      "multiprotocol_deep_scan"
+    ]
+  },
+  "ai_analysis": "",
+  "recommendations": [
+    "Implement a vulnerability management program with regular assessments",
+    "Deploy endpoint detection and response (EDR) solutions",
+    "Establish network segmentation and access controls",
+    "Implement multi-factor authentication for all user accounts",
+    "Develop and test incident response procedures",
+    "Provide security awareness training for all personnel",
+    "Establish regular security monitoring and logging",
+    "Implement patch management processes for all systems"
+  ],
+  "threat_model": ""
+}

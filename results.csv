@@ -1,0 +1,4 @@
+Port,State,Service,Banner,Version,ResponseTime
+21,open,ftp,220 192.168.1.1 FTP server ready,192.168.1.1,72.566969ms
+80,open,http,nginx,,72.772493ms
+443,open,https,nginx,,72.626221ms

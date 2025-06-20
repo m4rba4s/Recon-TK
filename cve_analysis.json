@@ -1,0 +1,198 @@
+[
+  {
+    "service": "http",
+    "version": "",
+    "port": 80,
+    "matched_cves": [
+      {
+        "id": "CVE-2025-1004",
+        "description": "Remote code execution vulnerability in http ",
+        "cvss": 8.5,
+        "severity": "HIGH",
+        "published_date": "2025-04-20T11:29:27.380332209+02:00",
+        "last_modified": "2025-05-20T11:29:27.380334366+02:00",
+        "references": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2025-1004",
+          "https://example.com/security-advisory"
+        ],
+        "exploits": [
+          {
+            "id": "exploit/linux/http/cve_2025_1004_rce",
+            "type": "metasploit",
+            "title": "Metasploit module: exploit/linux/http/cve_2025_1004_rce",
+            "description": "",
+            "url": "",
+            "code": "",
+            "verified": true,
+            "reliability": "excellent",
+            "platforms": [
+              "linux",
+              "windows"
+            ],
+            "privileges": "",
+            "disclosed": "0001-01-01T00:00:00Z"
+          }
+        ],
+        "affected_products": [
+          {
+            "vendor": "vendor",
+            "product": "http",
+            "versions": [
+              "",
+              "\u003c "
+            ],
+            "cpe": ""
+          }
+        ],
+        "patches": null,
+        "pocs": null,
+        "weaponized": true,
+        "in_the_wild": true
+      },
+      {
+        "id": "CVE-2025-1004",
+        "description": "Remote code execution vulnerability in http ",
+        "cvss": 8.5,
+        "severity": "HIGH",
+        "published_date": "2025-04-20T11:29:28.004289105+02:00",
+        "last_modified": "2025-05-20T11:29:28.004291355+02:00",
+        "references": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2025-1004",
+          "https://example.com/security-advisory"
+        ],
+        "exploits": [
+          {
+            "id": "exploit/linux/http/cve_2025_1004_rce",
+            "type": "metasploit",
+            "title": "Metasploit module: exploit/linux/http/cve_2025_1004_rce",
+            "description": "",
+            "url": "",
+            "code": "",
+            "verified": true,
+            "reliability": "excellent",
+            "platforms": [
+              "linux",
+              "windows"
+            ],
+            "privileges": "",
+            "disclosed": "0001-01-01T00:00:00Z"
+          }
+        ],
+        "affected_products": [
+          {
+            "vendor": "vendor",
+            "product": "http",
+            "versions": [
+              "",
+              "\u003c "
+            ],
+            "cpe": ""
+          }
+        ],
+        "patches": null,
+        "pocs": null,
+        "weaponized": true,
+        "in_the_wild": true
+      }
+    ],
+    "risk_score": 508
+  },
+  {
+    "service": "https",
+    "version": "",
+    "port": 443,
+    "matched_cves": [
+      {
+        "id": "CVE-2025-1005",
+        "description": "Remote code execution vulnerability in https ",
+        "cvss": 8.5,
+        "severity": "HIGH",
+        "published_date": "2025-04-20T11:29:27.244338455+02:00",
+        "last_modified": "2025-05-20T11:29:27.244340799+02:00",
+        "references": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2025-1005",
+          "https://example.com/security-advisory"
+        ],
+        "exploits": [
+          {
+            "id": "exploit/linux/http/cve_2025_1005_rce",
+            "type": "metasploit",
+            "title": "Metasploit module: exploit/linux/http/cve_2025_1005_rce",
+            "description": "",
+            "url": "",
+            "code": "",
+            "verified": true,
+            "reliability": "excellent",
+            "platforms": [
+              "linux",
+              "windows"
+            ],
+            "privileges": "",
+            "disclosed": "0001-01-01T00:00:00Z"
+          }
+        ],
+        "affected_products": [
+          {
+            "vendor": "vendor",
+            "product": "https",
+            "versions": [
+              "",
+              "\u003c "
+            ],
+            "cpe": ""
+          }
+        ],
+        "patches": null,
+        "pocs": null,
+        "weaponized": true,
+        "in_the_wild": true
+      },
+      {
+        "id": "CVE-2025-1005",
+        "description": "Remote code execution vulnerability in https ",
+        "cvss": 8.5,
+        "severity": "HIGH",
+        "published_date": "2025-04-20T11:29:28.004289282+02:00",
+        "last_modified": "2025-05-20T11:29:28.004291281+02:00",
+        "references": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2025-1005",
+          "https://example.com/security-advisory"
+        ],
+        "exploits": [
+          {
+            "id": "exploit/linux/http/cve_2025_1005_rce",
+            "type": "metasploit",
+            "title": "Metasploit module: exploit/linux/http/cve_2025_1005_rce",
+            "description": "",
+            "url": "",
+            "code": "",
+            "verified": true,
+            "reliability": "excellent",
+            "platforms": [
+              "linux",
+              "windows"
+            ],
+            "privileges": "",
+            "disclosed": "0001-01-01T00:00:00Z"
+          }
+        ],
+        "affected_products": [
+          {
+            "vendor": "vendor",
+            "product": "https",
+            "versions": [
+              "",
+              "\u003c "
+            ],
+            "cpe": ""
+          }
+        ],
+        "patches": null,
+        "pocs": null,
+        "weaponized": true,
+        "in_the_wild": true
+      }
+    ],
+    "risk_score": 508
+  }
+]

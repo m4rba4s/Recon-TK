@@ -1,0 +1,140 @@
+{
+  "target": "172.67.68.228",
+  "timestamp": "2025-06-19T16:33:41.713067369+02:00",
+  "total_tests": 6,
+  "passed_tests": 5,
+  "failed_tests": 1,
+  "tests": [
+    {
+      "test_name": "Basic Connectivity Test",
+      "status": "passed",
+      "execution_time": "5.119852512s",
+      "details": {
+        "port_22": {
+          "error": "dial tcp 172.67.68.228:22: i/o timeout",
+          "status": "closed"
+        },
+        "port_443": {
+          "status": "open"
+        },
+        "port_53": {
+          "error": "dial tcp 172.67.68.228:53: connect: connection refused",
+          "status": "closed"
+        },
+        "port_80": {
+          "status": "open"
+        }
+      },
+      "errors": [],
+      "debug": [
+        "Testing connectivity to 172.67.68.228",
+        "Port 80: OPEN",
+        "Port 443: OPEN",
+        "Port 22: CLOSED (dial tcp 172.67.68.228:22: i/o timeout)",
+        "Port 53: CLOSED (dial tcp 172.67.68.228:53: connect: connection refused)"
+      ]
+    },
+    {
+      "test_name": "DNS Resolution Test",
+      "status": "passed",
+      "execution_time": "94.635133ms",
+      "details": {
+        "a_records": [
+          "172.67.68.228"
+        ]
+      },
+      "errors": [],
+      "debug": [
+        "A records: [172.67.68.228]"
+      ]
+    },
+    {
+      "test_name": "HTTP/HTTPS Analysis",
+      "status": "passed",
+      "execution_time": "289.608625ms",
+      "details": {
+        "http_headers": {
+          "cf-cache": "",
+          "cf-ray": "9523139f0829c419-WAW",
+          "content-type": "text/plain; charset=UTF-8",
+          "server": "cloudflare"
+        },
+        "http_status": 403,
+        "https_error": "Get \"https://172.67.68.228\": remote error: tls: handshake failure"
+      },
+      "errors": [],
+      "debug": [
+        "Testing HTTP connection",
+        "HTTP Status: 403",
+        "Server: cloudflare",
+        "Testing HTTPS connection",
+        "HTTPS failed: Get \"https://172.67.68.228\": remote error: tls: handshake failure"
+      ]
+    },
+    {
+      "test_name": "Cloudflare Detection Test",
+      "status": "failed",
+      "execution_time": "139.774748ms",
+      "details": {},
+      "errors": [
+        "HTTP request failed: Get \"https://172.67.68.228\": remote error: tls: handshake failure"
+      ],
+      "debug": []
+    },
+    {
+      "test_name": "TLS Analysis Test",
+      "status": "passed",
+      "execution_time": "58.15907ms",
+      "details": {
+        "connection_time": "58.156392ms",
+        "port": 443,
+        "tcp_connection": "successful"
+      },
+      "errors": [],
+      "debug": [
+        "TCP connection established",
+        "TLS handshake simulation completed"
+      ]
+    },
+    {
+      "test_name": "False Positive Validation Test",
+      "status": "passed",
+      "execution_time": "234.979337ms",
+      "details": {
+        "calculated_fp_rate": 0,
+        "content_similarity_check": true,
+        "expected_false_positive": true,
+        "known_cloudflare_ip": true,
+        "kpi_threshold": 0.01,
+        "meets_kpi": true,
+        "validation_status": "should_be_flagged_as_fp"
+      },
+      "errors": [],
+      "debug": [
+        "Testing known Cloudflare IP for false positive detection",
+        "Target is known Cloudflare IP - should be flagged as false positive",
+        "Simulating content similarity check",
+        "Content similarity: true",
+        "Calculated FP rate: 0.0000",
+        "Meets KPI (≤1%): true"
+      ]
+    }
+  ],
+  "system_info": {
+    "architecture": "amd64",
+    "go_version": "1.22+",
+    "os": "linux",
+    "rtk_version": "2.0.0-elite",
+    "test_timestamp": "2025-06-19T16:33:47+02:00"
+  },
+  "network_analysis": {},
+  "security_analysis": {},
+  "recommendations": [
+    "⚠️ Some tests failed - review error messages and improve reliability",
+    "🔍 Implement comprehensive Reality-Checker validation for this target",
+    "📊 Monitor false positive rates continuously",
+    "🛡️ Ensure OWASP/NIST compliance in all scan results",
+    "⚡ Optimize performance for production deployment"
+  ],
+  "critical_findings": []
+}

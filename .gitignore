@@ -1,0 +1,216 @@
+# RTK Elite - Professional Penetration Testing Framework
+# Clean Repository Configuration
+
+# ==============================================================================
+# BINARIES & EXECUTABLES
+# ==============================================================================
+rtk
+rtk.exe
+rtk-elite
+rtk-elite.exe
+recon-toolkit
+recon-toolkit.exe
+main
+main.exe
+*.exe
+*.dll
+*.so
+*.dylib
+
+# ==============================================================================
+# BUILD & COMPILATION ARTIFACTS  
+# ==============================================================================
+# Go build cache
+/vendor/
+go.work
+go.work.sum
+*.mod.sum.backup
+
+# Test binaries
+*.test
+*.test.exe
+
+# Coverage reports
+*.cover
+*.prof
+coverage.html
+coverage.out
+c.out
+
+# ==============================================================================
+# DATA DIRECTORIES & RUNTIME FILES
+# ==============================================================================
+# User data directories
+.local/
+.config/
+.cache/
+
+# RTK Elite data directories
+/data/
+/cache/
+/logs/
+/reports/
+/pcap/
+/progress/
+/sbom/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+rtk_elite.db
+cve_database.db
+
+# Configuration backups
+*.conf.bak
+*.json.bak
+*.yaml.bak
+config.local.*
+
+# ==============================================================================
+# SCAN RESULTS & ARTIFACTS
+# ==============================================================================
+# Scan outputs
+*_scan_results.*
+*_test_report.md
+*_comprehensive_report.*
+debug_*.txt
+test_output_*
+scan_*.json
+scan_*.csv
+scan_*.xml
+
+# Third-party tool outputs
+nmap_*.xml
+nuclei_*.json
+amass_*.txt
+subfinder_*.txt
+httpx_*.json
+masscan_*.json
+gobuster_*.txt
+
+# PCAP files
+*.pcap
+*.pcapng
+capture_*.cap
+
+# ==============================================================================
+# SECURITY & CREDENTIALS
+# ==============================================================================
+# Certificates and keys
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+private_keys/
+certificates/
+
+# API keys and secrets
+api_keys.txt
+secrets.json
+.env*
+.secrets
+
+# ==============================================================================
+# DEVELOPMENT & IDE FILES
+# ==============================================================================
+# IDE configurations
+.vscode/
+.idea/
+*.sublime-*
+*.code-workspace
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+.#*
+\#*#
+
+# ==============================================================================
+# OPERATING SYSTEM FILES
+# ==============================================================================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.Trash-*
+
+# ==============================================================================
+# TEMPORARY & LOG FILES
+# ==============================================================================
+# Temporary directories
+.tmp/
+tmp/
+temp/
+.temp/
+
+# Log files
+*.log
+*.log.*
+logs/
+run.log
+error.log
+debug.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# ==============================================================================
+# DOCUMENTATION & BUILD ARTIFACTS
+# ==============================================================================
+# Documentation builds
+docs/_build/
+docs/.doctrees/
+site/
+_site/
+
+# Package files
+*.tar.gz
+*.zip
+*.rar
+*.7z
+releases/
+dist/
+
+# ==============================================================================
+# VERSION CONTROL & CI/CD
+# ==============================================================================
+# Git hooks (keep local)
+.git/hooks/pre-commit.local
+.git/hooks/post-commit.local
+
+# CI/CD artifacts
+.github/workflows/test_results/
+ci_reports/
+
+# ==============================================================================
+# CUSTOM EXCLUSIONS
+# ==============================================================================
+# Custom wordlists (usually large)
+wordlists/
+custom_wordlists/
+
+# Custom payloads
+payloads/custom/
+exploits/private/
+
+# Research notes (keep private)
+research_notes/
+private_notes.md
+analysis_*.md
