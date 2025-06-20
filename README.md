@@ -2,8 +2,8 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](LICENSE)
 [![Go](https://img.shields.io/badge/go-1.23+-00ADD8.svg?style=for-the-badge&logo=go)](https://golang.org)
-[![Platform](https://img.shields.io/badge/platform-linux%20%7C%20windows%20%7C%20macOS-lightgrey.svg?style=for-the-badge)](https://github.com/your-org/rtk-elite)
-[![Security](https://img.shields.io/badge/security-hardened-green.svg?style=for-the-badge)](https://github.com/your-org/rtk-elite)
+[![Platform](https://img.shields.io/badge/platform-linux%20%7C%20windows%20%7C%20macOS-lightgrey.svg?style=for-the-badge)](https://github.com/m4rba4s/Recon-TK)
+[![Security](https://img.shields.io/badge/security-hardened-green.svg?style=for-the-badge)](https://github.com/m4rba4s/Recon-TK)
 
 ```
 ██████╗ ████████╗██╗  ██╗    ███████╗██╗     ██╗████████╗███████╗
@@ -100,8 +100,8 @@ Minimum 2GB RAM, 1GB disk space
 ### Quick Start
 ```bash
 # Clone repository
-git clone https://github.com/your-org/rtk-elite.git
-cd rtk-elite
+git clone https://github.com/m4rba4s/Recon-TK.git
+cd Recon-TK
 
 # Build from source
 make build
@@ -116,15 +116,15 @@ make install
 ### Package Installation
 ```bash
 # Debian/Ubuntu
-wget https://github.com/your-org/rtk-elite/releases/download/v3.0.0/rtk-elite_3.0.0_linux_amd64.deb
+wget https://github.com/m4rba4s/Recon-TK/releases/download/v3.0.0/rtk-elite_3.0.0_linux_amd64.deb
 sudo dpkg -i rtk-elite_3.0.0_linux_amd64.deb
 
 # RHEL/CentOS
-wget https://github.com/your-org/rtk-elite/releases/download/v3.0.0/rtk-elite_3.0.0_linux_amd64.rpm
+wget https://github.com/m4rba4s/Recon-TK/releases/download/v3.0.0/rtk-elite_3.0.0_linux_amd64.rpm
 sudo rpm -i rtk-elite_3.0.0_linux_amd64.rpm
 
 # macOS Homebrew
-brew tap your-org/rtk-elite
+brew tap m4rba4s/recon-tk
 brew install rtk-elite
 ```
 
@@ -286,8 +286,8 @@ We welcome contributions from security professionals and developers:
 ### Development Setup
 ```bash
 # Clone and setup
-git clone https://github.com/your-org/rtk-elite.git
-cd rtk-elite
+git clone https://github.com/m4rba4s/Recon-TK.git
+cd Recon-TK
 
 # Install dependencies
 make deps
