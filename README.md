@@ -433,4 +433,5 @@ rtk resume              # List resumable sessions
 **🔥 RTK Elite v3.0 - Where professional security testing meets enterprise reliability.**
 
 ---
-*Made with ⚡ by security professionals, for security professionals.*
+*Made with ⚡ by security professionals, for security professionals.* 
+Funcybot
